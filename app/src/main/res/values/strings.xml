@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppKeepAlive</string>
+    <string name="app_is_running">AppKeepAlive is running</string>
+</resources>
