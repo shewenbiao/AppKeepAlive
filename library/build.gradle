@@ -8,9 +8,6 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-group = 'com.github.appkeepalive'
-version = '1.0.0'
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -65,9 +62,18 @@ afterEvaluate {
                 from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'com.github.appkeepalive'
-                artifactId = 'library'
-                version = '1.0.0'
+                groupId = 'com.appkeepalive.library'
+                artifactId = 'release'
+                version = '1.0.1'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = 'com.appkeepalive.library'
+                artifactId = 'debug'
+                version = '1.0.1'
             }
         }
     }
