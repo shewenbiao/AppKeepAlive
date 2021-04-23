@@ -16,8 +16,8 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation 'com.github.shewenbiao:AppKeepAlive:TAG'
+    implementation 'com.github.shewenbiao:AppKeepAlive:Tag'
 }
 ```
-**TAG is the latest version:** [![](https://jitpack.io/v/shewenbiao/AppKeepAlive.svg)](https://jitpack.io/#shewenbiao/AppKeepAlive)
+**Tag** is the latest version: [![](https://jitpack.io/v/shewenbiao/AppKeepAlive.svg)](https://jitpack.io/#shewenbiao/AppKeepAlive)
 
