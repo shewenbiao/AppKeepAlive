@@ -42,7 +42,7 @@ dependencies {
 
 //    implementation project(':library')
 
-    implementation 'com.github.shewenbiao.AppKeepAlive:release:1.0.1'
+    implementation 'com.github.shewenbiao.AppKeepAlive:appkeepalive-sdk-release:1.0.3'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
