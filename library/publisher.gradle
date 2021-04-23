@@ -16,18 +16,18 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = project.group
-                artifactId = project.ext.projectName + "-release"
+                artifactId = project.ext.projectName
                 version = project.version
             }
-            // Creates a Maven publication called “debug”.
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
-
-                groupId = project.group
-                artifactId = project.ext.projectName + '-debug'
-                version = project.version
-            }
+//            // Creates a Maven publication called “debug”.
+//            debug(MavenPublication) {
+//                // Applies the component for the debug build variant.
+//                from components.debug
+//
+//                groupId = project.group
+//                artifactId = project.ext.projectName + '-debug'
+//                version = project.version
+//            }
         }
     }
 }

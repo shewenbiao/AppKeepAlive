@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 project.group = 'com.appkeepalive'
-project.version = '1.0.3'
-project.ext.versionCode = 103
+project.version = '2.0.0'
+project.ext.versionCode = 200
 
 android {
     compileSdkVersion 30
