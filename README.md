@@ -1,5 +1,5 @@
 # AppKeepAlive
-Android应用保活
+Keeping the Android app alive
 
 ## Step 1. Add the JitPack repository to your build file
 
