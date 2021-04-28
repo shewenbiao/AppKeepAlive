@@ -26,6 +26,8 @@ class MyApplication : Application() {
             this,
             ForegroundNotificationConfig(getForegroundNotificationId(), notification)
         )
+
+//        KeepAliveManager.start(this, null) //Adopt the system default notification style
     }
 
     private fun getForegroundNotificationId() = 1000
