@@ -21,3 +21,26 @@ dependencies {
 ```
 **Tag** is the latest version: [![](https://jitpack.io/v/shewenbiao/AppKeepAlive.svg)](https://jitpack.io/#shewenbiao/AppKeepAlive)
 
+## Step 3. Add code in your application
+```kotlin
+class MyApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        var notification: Notification? = null
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notification = getForegroundNotification()
+        }
+        KeepAliveManager.start(
+            this,
+            ForegroundNotificationConfig(getForegroundNotificationId(), notification)
+        )
+        
+//      or
+//      KeepAliveManager.start(this, null) //Adopt the system default notification style
+
+
+    }
+}
+```
