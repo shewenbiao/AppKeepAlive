@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Handler
 import android.os.IBinder
+import android.os.Looper
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import com.keepalive.library.util.Utils
@@ -34,7 +35,10 @@ open class PermanentService : Service() {
                 } catch (e: Exception) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         try {
-                            context.startForegroundService(intent)
+                            Looper.myQueue().addIdleHandler {
+                                context.startForegroundService(intent)
+                                false
+                            }
                         } catch (e1: Exception) {
                         }
                     }

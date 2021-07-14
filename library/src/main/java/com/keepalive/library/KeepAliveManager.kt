@@ -15,10 +15,10 @@ object KeepAliveManager {
      */
     fun start(context: Context, foregroundNotificationConfig: ForegroundNotificationConfig?) {
 
-        PermanentService.start(context, foregroundNotificationConfig)
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             PermanentJobService.start(context, foregroundNotificationConfig)
+        } else {
+            PermanentService.start(context, foregroundNotificationConfig)
         }
     }
 }
